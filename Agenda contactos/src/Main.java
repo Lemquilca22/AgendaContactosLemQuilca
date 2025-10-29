@@ -6,11 +6,43 @@ public class Main {
         //Implementar un menu con 4 opciones
 
         System.out.println("¿Que quiere hacer hoy?"+ " Selecciona una opcion");
-        System.out.println("Añadir contacto"+"\n"+"Mostrar contactos"+"\n"+"Buscar contacto"+"\n"+"Salir");
+        System.out.println("1) Añadir contacto"+"\n"+"2) Mostrar contactos"+"\n"+"3) Modificar contacto"+"\n"+"4)Salir");
 
-        String leer = scan.nextLine();
+        int opcion = scan.nextInt();
+        int num;
+        String nom;
+        String nommod;
 
-        System.out.println("Usted a escogido "+leer);
+        switch (opcion) {
+            case 1:
+                System.out.println("Ingrese el numero de telefono: ");
+                num= scan.nextInt();
+                System.out.println("Ingrese el nombre que le quiere asignar: ");
+                nom = scan.next();
+                System.out.println("Usted ha añadido a "+nom+" con numero de telefono: "+num);
+                break;
+            case 2:
+                System.out.println("A quien estas buscando");
+                nom = scan.next();
+                System.out.println("Perfecto, encontré a "+nom);
+
+                break;
+            case 3:
+                System.out.println("Que contacto quieres modificar?");
+                nom = scan.next();
+                System.out.println("Perfecto, encontré a "+nom);
+                System.out.println("cual deseas que sea el nuevo nombre");
+                nom = scan.next();
+                System.out.println("Haz modificado el contacto a "+nom);
+
+                break;
+            case 4:
+                System.out.println("Nos vemos luego");
+
+                break;
+        }
+        System.out.println("Espero haberte ayudado, ten un buen dia");
+
 
         }
         }
