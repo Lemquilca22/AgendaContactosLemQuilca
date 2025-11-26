@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Main2 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         //Implementar un menu con 4 opciones
@@ -8,6 +8,7 @@ public class Main {
         String rpta;
         String [] arraycontacto = new String[100];
         int [] arraynumero = new int[100];
+        int numerocontactoañadidos=0;
         while(salir) {
             System.out.println("¿Que quiere hacer hoy?"+ " Selecciona una opcion");
             System.out.println("1) Añadir contacto"+"\n"+"2) Mostrar contactos"+"\n"+"3) Modificar contacto");
@@ -15,20 +16,24 @@ public class Main {
             int opcion = scan.nextInt();
             int num;
             String nom;
-            String nommod;
-
             switch (opcion) {
                 case 1:
                     System.out.println("Ingrese el numero de telefono: ");
-                    num= scan.nextInt();
+                    arraynumero[numerocontactoañadidos]=scan.nextInt();
                     System.out.println("Ingrese el nombre que le quiere asignar: ");
-                    nom = scan.next();
-                    System.out.println("Usted ha añadido a "+nom+" con numero de telefono: "+num);
+                    scan.next();
+                    arraycontacto[numerocontactoañadidos]=scan.nextLine();
+                    numerocontactoañadidos++;
                     break;
                 case 2:
-                    System.out.println("A quien estas buscando");
-                    nom = scan.next();
-                    System.out.println("Perfecto, encontré a "+nom);
+                    System.out.println("Esta es tu lista de contactos");
+                    for (int i = 0; i < arraycontacto.length; i++) {
+                        if (arraycontacto[numerocontactoañadidos]== null) {
+                            continue;
+                        } else {
+                            System.out.println("Nombre: "+arraycontacto[numerocontactoañadidos]+"\nNumero: "+arraynumero[numerocontactoañadidos]);
+                        }
+                    }
 
                     break;
                 case 3:
