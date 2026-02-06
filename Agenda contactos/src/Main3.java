@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main1 {
+public class Main3 {
     static void print(){
         System.out.println("¿Que quiere hacer hoy?"+ " Selecciona una opcion");
         System.out.println("1) Añadir contacto"+"\n"+"2) Mostrar contactos"+"\n"+"3) Modificar contacto"+"\n"+"4) Buscar contacto");
@@ -101,6 +101,6 @@ public class Main1 {
 
 
 
-    }
-}
+        }
+        }
 
