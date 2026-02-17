@@ -15,8 +15,7 @@ public class Main {
         System.out.println("Nombre: "); String nombre=sc.nextLine();
         System.out.println("Telefono: "); int telefono=sc.nextInt(); sc.nextLine();
         System.out.println("Correo: "); String correo=sc.nextLine();
-        listaContactos.add(new Contacto(nombre, telefono, correo));
-        //Tenemos que pasarle todos los parametros del contacto
+        listaContactos.add(new Contacto(nombre, telefono, correo)); //Tenemos que pasarle todos los parametros del contacto
     }
     static void modificarcontacto(ArrayList<Contacto>listaContactos, Scanner sc){
         System.out.println("Contacto a modificar: ");
